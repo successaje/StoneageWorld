@@ -59,7 +59,7 @@ contract StoneAge is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
     // function _beforeTokenTransfer (address from, address to, uint256 firstTokenId, uint256 batchSize) internal override {
     //     require(from==address(0) || to==address(0), "Soulbound: cannot transfer");
     //     super._beforeTokenTransfer(from, to, firstTokenId, batchSize);
-    // }
+    // } 
 
     
 }
