@@ -8,14 +8,6 @@
 
 A **phenomenon called The Vortex** dynamically bridges economies across **Ethereum, BNB Chain, Ancient8, and more**, allowing users to trade cross-chain and engage in a **player-driven economic system**.
 
-### Contracts
-- Contract 1 - https://scanv2-testnet.ancient8.gg/address/0x86C41594e9aDeCcf8c85ba9EEe0138C7c9E70dBc
-- Contract 2(StoneAge Land) - 
-- Contract 3 (StoenAge Equipement) - https://scanv2-testnet.ancient8.gg/address/0x7CC324d15E5fF17c43188fB63b462B9a79dA68f6
-- Contract 4 (StoneWorld Marketplace) - https://scanv2-testnet.ancient8.gg/address/0x7dc16d44789283279b28C940359011F2649897dA
-- COntract 5 (StoneAge Rentals) - https://scanv2-testnet.ancient8.gg/address/0xE2Ea85Cc94E40cdc1Abc058373785ee6b3809183
-- Contract 5 (Stoneage Stakings) - https://scanv2-testnet.ancient8.gg/address/0xc4d732199B7d21207a74CFE6CEd4d17dD330C7Ea
-
 
 ## Contract Highlights
 ### 1. **StoneAgeLand (ERC-721)** - https://scanv2-testnet.ancient8.gg/address/0xF673F508104876c72C8724728f81d50E01649b40
