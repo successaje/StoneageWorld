@@ -44,6 +44,16 @@ A **phenomenon called The Vortex** dynamically bridges economies across **Ethere
 - **Storage:** IPFS
 - **AI & Market Balancing:** Python-based dynamic pricing models
 
+## 🔥 Why Stoneage?
+| Feature | Stoneage | Other Blochchain games|
+| --- | --- | --- |
+| Multi-Chain Economy | ✅ AI-driven cross-chain trading (Ethereum, BNB, Ancient8) | ❌ Limited to one blockchain|
+| Vortex Mechanic | ✅ Dynamic trade portals opening across chains | ❌ Static marketplaces |
+|Evolutionary Gameplay	| ✅ Progress from Stone Age to Future Tech	| ❌ Single-era setting
+|AI-Managed Economy	| ✅ Real-time economic balancing across chains	| ❌ Fixed market conditions
+|Time-Traveler NFT Tools	| ✅ Rare futuristic farming tools introduced unpredictably	| ❌ Generic farming tools
+
+
 ## 📂 Repository Structure
 ```
 📦 StoneAge
