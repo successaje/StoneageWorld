@@ -11,13 +11,13 @@ export default function WalletConnectPage() {
         config,
     });
 
-    useEffect(() => {
-        connect();
+    // useEffect(() => {
+    //     connect();
 
-        if (isSuccess) {
-            window.parent.postMessage("walletConnected", window.location.origin);
-        }
-    }, [isSuccess, connect]);
+    //     if (isSuccess) {
+    //         window.parent.postMessage("walletConnected", window.location.origin);
+    //     }
+    // }, [isSuccess, connect]);
 
     return <p>Connecting to wallet...</p>;
 }
