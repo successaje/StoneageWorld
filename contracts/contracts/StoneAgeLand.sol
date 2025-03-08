@@ -90,3 +90,83 @@ contract StoneAgeEquipment is ERC1155, Ownable {
     }
 }
 
+contract StoneAgeMarketplace {
+    struct Listing {
+        address seller;
+        uint256 price;
+        bool active;
+    }
+
+    mapping(uint256 => Listing) public landListings;
+    mapping(uint256 => Listing) public equipmentListings;
+
+    event ItemListed(uint256 indexed itemId, address indexed seller, uint256 price);
+    event ItemPurchased(uint256 indexed itemId, address indexed buyer);
+    event ItemDelisted(uint256 indexed itemId);
+
+    function listLand(uint256 landId, uint256 price) external {
+        landListings[landId] = Listing(msg.sender, price, true);
+        emit ItemListed(landId, msg.sender, price);
+    }
+
+    function buyLand(uint256 landId) external payable {
+        require(landListings[landId].active, "Land is not for sale");
+        require(msg.value >= landListings[landId].price, "Insufficient payment");
+
+        address seller = landListings[landId].seller;
+        landListings[landId].active = false;
+        payable(seller).transfer(msg.value);
+
+        emit ItemPurchased(landId, msg.sender);
+    }
+}
+
+contract StoneAgeStaking {
+    struct Stake {
+        address staker;
+        uint256 amount;
+        uint256 timestamp;
+    }
+
+    mapping(address => Stake) public stakes;
+    event Staked(address indexed staker, uint256 amount);
+    event Unstaked(address indexed staker, uint256 amount);
+
+    function stake(uint256 amount) external {
+        stakes[msg.sender] = Stake(msg.sender, amount, block.timestamp);
+        emit Staked(msg.sender, amount);
+    }
+
+    function unstake() external {
+        uint256 amount = stakes[msg.sender].amount;
+        delete stakes[msg.sender];
+        emit Unstaked(msg.sender, amount);
+    }
+}
+
+contract StoneAgeRentals {
+    struct Rental {
+        address renter;
+        uint256 landId;
+        uint256 duration;
+        bool active;
+    }
+
+    mapping(uint256 => Rental) public rentals;
+    event Rented(uint256 indexed landId, address indexed renter, uint256 duration);
+    event RentalEnded(uint256 indexed landId);
+
+    function rentLand(uint256 landId, uint256 duration) external {
+        rentals[landId] = Rental(msg.sender, landId, duration, true);
+        emit Rented(landId, msg.sender, duration);
+    }
+
+    function endRental(uint256 landId) external {
+        rentals[landId].active = false;
+        emit RentalEnded(landId);
+    }
+}
+
+
+
+
